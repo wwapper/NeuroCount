@@ -45,7 +45,7 @@
     
   </h4>
   
-![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/photo1674033491.jpeg)
+    ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/photo1674033491.jpeg)
   
     <h3>Обводим изображение белыми рамками:</h3>
   <h4>
