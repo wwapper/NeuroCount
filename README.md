@@ -182,7 +182,8 @@
       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
       coord.append((cX,cY))
     cv2.imwrite('contours_count.jpg', image)
-    print(len(coord))
+    number_of_neurons = len(coord)
+    print(number_of_neurons)
 
     
   </h4>
