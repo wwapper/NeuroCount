@@ -109,7 +109,7 @@
     ret, threshold_image_new = cv2.threshold(threshold_image_blur, 120, 255, cv2.THRESH_BINARY)
     cv2.imwrite("threshold_image_new.jpg", threshold_image_new)
     
-     ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/threshold%20new.jpeg)
+![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/threshold%20new.jpeg)
     
   </h4>
   <h5>Опыт использования данного кода на нескольких картинках показал необходимость этого шага, которая состоит в очередном шаге удаления аксонов на изображении. Параметры размытия и перевода в бинарное чб подбирались вручную.
