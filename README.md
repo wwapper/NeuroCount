@@ -1,5 +1,5 @@
 # NeuroCount
-
+![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/photo1674043539.jpeg)
   
 <h2> Ниже приведен код с подробными комментариями </h2>
 <div>
