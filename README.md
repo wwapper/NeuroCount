@@ -57,7 +57,7 @@
     image = increase_brightness(image, value=10)
     
   </h4>
-  <h5>Увеличения яркости является необходимым шагом при удалении с изображения аксонов, которые мешают подсчету количества нейронов на фотографии среза.
+  <h5>Увеличения яркости является необходимым шагом при удалении с изображения шумового окрашивания, которые мешают подсчету количества нейронов на фотографии среза.
   </h5>
         <h3>Увеличиваем резкость изображения и переводим его в черно-белую цветовую гамму:</h3>
   <h4>
@@ -120,8 +120,8 @@
     max_size = 10000
     im_result = np.zeros((edged.shape))
     for blob in range(nb_blobs):
-    if max_size >= sizes[blob] >= min_size:
-        im_result[im_with_separated_blobs == blob + 1] = 255
+        if max_size >= sizes[blob] >= min_size:
+            im_result[im_with_separated_blobs == blob + 1] = 255
     cv2.imwrite("final.jpg", im_result)
     
   </h4>
