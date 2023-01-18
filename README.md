@@ -41,7 +41,7 @@
   <h4>
 
     image = cv2.imread("example.jpg")
-    ![photo1674033491](https://user-images.githubusercontent.com/62430650/213170959-779af658-987b-4cac-804a-9b43bb2f880e.jpeg)
+    <img src="/Users/user/Downloads/photo1674033491.jpeg">
 
     
   </h4>
