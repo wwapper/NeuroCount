@@ -72,7 +72,7 @@
     cv2.imwrite("gray.jpg", gray_image)
     </h4>
     
-    ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/gray.jpeg)
+![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/gray.jpeg)
     
   <h5>Матрица kernel является линейной сверткой, которая берет значение яркости окружающих данную точку пиеселей, умножает на -1 и складываем с яркостью центрального пикселя, умноженной на 9. Результат - увеличение резкости изображения. Этот шаг нужен для того, чтобы получить более четкие границы нейронов на черно-белом изображении
   </h5>
@@ -83,7 +83,7 @@
     cv2.imwrite("gray_image_blur.jpg", gray_image_blur)
       </h4>
     
-     ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/blur.jpeg)
+ ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/blur.jpeg)
     
   <h5>Размытие необходимо для удаления аксонов с изображения.
   </h5>
@@ -93,7 +93,7 @@
     ret, threshold_image = cv2.threshold(gray_image_blur, 120, 255, cv2.THRESH_BINARY)
     cv2.imwrite("threshold_image.jpg", threshold_image)
     
-     ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/threshold.jpeg)
+ ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/threshold.jpeg)
     
   </h4>
   <h5>Результатом работы этой части кода является бинарное черно-белое изображение. Оно получается из исходного заменой пикселей: если его яркость ниже 120, то он заменяется на 0 (черный), если выше, то на 255 (белый). Пороговое значение подбирается вручную.
@@ -104,7 +104,7 @@
     threshold_image_blur = cv2.GaussianBlur(threshold_image, (3, 3), 5)
     cv2.imwrite("threshold_image_blur.jpg", threshold_image_blur)
     
-    ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/threshold%20blur.jpeg)
+![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/threshold%20blur.jpeg)
 
     ret, threshold_image_new = cv2.threshold(threshold_image_blur, 120, 255, cv2.THRESH_BINARY)
     cv2.imwrite("threshold_image_new.jpg", threshold_image_new)
@@ -121,7 +121,7 @@
     cv2.imwrite("edged.jpg", edged)
       </h4>
     
-    ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/edged.jpeg)
+![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/edged.jpeg)
     
 
   <h5>На данном шаге были определены контуры объектов на изображении. 
@@ -142,7 +142,7 @@
     cv2.imwrite("final.jpg", im_result)
     </h4>
     
-    ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/final.jpeg)
+![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/final.jpeg)
     
   <h5>Данный этап необходим для удаления различных артефактов, исходя из их размера. Параметры max_size и min_size, отвечающие соответственно за верхнюю и нижнюю границы условия на размер, были выбраны вручную.
   </h5>  
@@ -155,7 +155,7 @@
     closed_final = closed_final.astype(np.uint8)
   </h4>
     
-     ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/closed%20final.jpeg)
+ ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/closed%20final.jpeg)
     
   <h5>Для корректного подсчета нейронов необходимо замкнуть близко расположенные точки на контуре клетки.
   </h5>
@@ -169,7 +169,7 @@
     cv2.imwrite('contours.jpg', image1)
   </h4>
     
-     ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/contours.jpeg)
+ ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/contours.jpeg)
     
   <h5>На этом шаге происходит сопоставление полученных контуров нейронов с исходным изоюражением.
   </h5>
@@ -189,7 +189,7 @@
     cv2.imwrite('contours_new.jpg', image)
    </h4>
     
-     ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/contours%20new.jpeg)
+ ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/contours%20new.jpeg)
     
   <h5>Этот шаг необходим, чтобы удалить разного рода артефакты, которые не были удалены по условию на размер (на картинке с контурами этими артефактами являются линии). Было предложено условие на отношение площади к периметру (как известно, для линий это отношение близко к 1). Соответственно, если это отношение больше 2.7 (выбрано вручную), то контур удаляется.
   </h5>
@@ -215,6 +215,6 @@
   <h5>На этом шаге происходит нахождение центров нейронов на картинке и их изображение (чтобы оценить правильность подсчета контуров нейронов). Центры контуров записываются в отдельный список, количество элементов в котором является числом нейронов на исходной картинке
   </h5>
   
-   ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/contours_count.jpeg)
+![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/contours_count.jpeg)
               
     
