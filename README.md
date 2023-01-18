@@ -79,6 +79,8 @@
     gray_image_blur = cv2.medianBlur(gray_image, 5)
     cv2.imwrite("gray_image_blur.jpg", gray_image_blur)
     
+    ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/blur.jpeg)
+    
   </h4>
   <h5>Размытие необходимо для удаления аксонов с изображения.
   </h5>
