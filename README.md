@@ -75,7 +75,7 @@ NeuroCount - программный код  для автоматическог�
   
 ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/photo1674033491.jpeg)
   
-    <h3>Обводим изображение белыми рамками:</h3>
+<h3>Обводим изображение белыми рамками:</h3>
   <h4>
 
     image = cv2.copyMakeBorder(src=image, top=2, bottom=2, left=2, right=2, borderType=cv2.BORDER_CONSTANT,value=(255, 255, 255))
