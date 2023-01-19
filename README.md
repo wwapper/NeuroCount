@@ -110,7 +110,8 @@ NeuroCount - программный код  для автоматическог�
 
     gray_image_blur = cv2.medianBlur(gray_image, 5)
     cv2.imwrite("gray_image_blur.jpg", gray_image_blur)
-      </h4>
+   
+  </h4>
     
  ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/blur.jpeg)
     
