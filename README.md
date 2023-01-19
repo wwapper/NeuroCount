@@ -99,7 +99,7 @@ NeuroCount - программный код  для автоматическог�
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     cv2.imwrite("gray.jpg", gray_image)
     
-    </h4>
+   </h4>
     
 ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/gray.jpeg)
     
