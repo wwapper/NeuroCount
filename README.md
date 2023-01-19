@@ -149,7 +149,7 @@ NeuroCount - программный код  для автоматическог�
     
     edged = cv2.Canny(threshold_image_new, 0, 300, apertureSize = 7, L2gradient=True)
     cv2.imwrite("edged.jpg", edged)
-      </h4>
+  </h4>
     
 ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/edged.jpeg)
     
@@ -170,7 +170,7 @@ NeuroCount - программный код  для автоматическог�
         if max_size >= sizes[blob] >= min_size:
             im_result[im_with_separated_blobs == blob + 1] = 255
     cv2.imwrite("final.jpg", im_result)
-    </h4>
+   </h4>
     
 ![Иллюстрация к проекту](https://github.com/wwapper/NeuroCount/blob/master/program/images/final.jpeg)
     
